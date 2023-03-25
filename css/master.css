@@ -1,0 +1,1027 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    max-width: 100vw;
+    text-shadow: 2px 2px 4px black;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 7vw;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home_body {
+    background: url(/img/classic.png) no-repeat center center fixed;
+}
+
+.webshop_body {
+    background: url(/img/classic.png) no-repeat center center fixed;
+}
+
+.dlc_body {
+    background: url(/img/grimm_menu.png) no-repeat center center fixed;
+}
+
+body > nav {
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    height: 8vh;
+    box-sizing: border-box;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+body > nav > a {
+    box-shadow: 0px 1px 3px 0px black;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-decoration: none;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+body > .normalNav > a {
+    background-image: linear-gradient( rgba(71, 110, 110, 1),rgba(34, 51, 51, 1));
+}
+
+body > .dlcNav > a {
+    background-image: linear-gradient(rgb(137, 51, 51), rgb(95, 10, 10))
+}
+
+body > nav > a > figure {
+    position: relative;
+    height: 2.5vw;
+    z-index: 5;
+}
+
+body > nav > a > .left_arrow {
+    text-align: right;
+    opacity: 0;
+    animation: wobbleLeft;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+
+body > nav > a > .right_arrow {
+    text-align: left;
+    opacity: 0;
+    animation: wobbleRight;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-timing-function:ease-in-out
+}
+
+body > nav > a > figure > img {
+    height: 2.5vw;
+    z-index: 5;
+}
+
+h2 {
+    letter-spacing: 2px;
+    color: white;
+    font-family: 'Bebas Neue';
+    text-shadow: 3px 3px 3px black;
+}
+
+p {
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: 2px 2px 4px black;
+    color: white;
+}
+
+body > nav > a > h2 {
+    grid-column-start: 2;
+    position: relative;
+    text-align: center;
+    font-size: 3vw;
+}
+
+body > .normalNav > a:hover {
+    background-image: linear-gradient( rgba(102, 153, 153, 1),rgba(71, 104, 104, 1));
+}
+
+body > .dlcNav > a:hover {
+    background-image: linear-gradient(rgb(147, 92, 92), rgb(108, 48, 48))
+}
+
+@keyframes wobbleLeft {
+    0% {right: 0}   
+    50% {right: 10px}
+    100% {right: 0}
+}
+
+@keyframes wobbleRight {
+    0% {left: 0}
+    50% {left: 10px}
+    100% {left: 0}
+}
+
+body > header {
+    overflow: clip;
+    height: 100vh;
+    box-sizing: border-box;
+    width: 100%;
+    margin:0 auto;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    position: relative;
+    align-items: center;
+    box-shadow: 0px 3px 10px 0px black;
+    z-index: 1;
+}
+
+body > .header_home {
+    background: url(/img/page_header.jpg) no-repeat center center scroll;
+    background-size:cover;
+}
+
+body > .header_webshop {
+    background: url(/img/shrine.png) no-repeat center center scroll;
+    background-size: cover;
+}
+
+body > .header_dlc {
+    background: url(/img/grimm_troupe.jpg) no-repeat center center scroll;
+    background-size: cover;
+}
+
+body > header > article {
+    box-shadow: 0px 0px 50px 1px black;
+    width: 100%;
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items:center;
+    padding-bottom: 2.5vw;
+}
+
+body > header > article > h1 {
+    position: relative;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    letter-spacing: 2px;
+    color: white;
+    font-size: 10vw;
+    font-family: 'Bebas Neue';
+    text-shadow: 3px 3px 3px black;
+    animation: fadeInLeft;
+    animation-duration: 2.5s;
+    animation-timing-function: ease;
+}
+
+body > header > article > figure {
+    width: 100%;
+}
+
+body > header > article > figure > img {
+    position: relative;
+    bottom: 1vw;
+    width: 50%;
+}
+body > header > article > h2 {
+    position: relative;
+    font-size: 2.5vw;
+    transition: 0.2s all;
+    animation: fadeInRight;
+    animation-duration: 2.5s;
+    animation-timing-function: ease;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
+}
+
+body > header > article > a > .caption {
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 10px 1px black, -1px -1px 10px -1px black; 
+    border-radius: 5px;
+    width: 20vw;
+    position: relative;
+    margin: 0 auto;
+    border-left: solid;
+    border-left-width: 0.8vw;
+    border-left-color: rgb(199, 60, 60);
+    transition: 0.2s all;
+    animation: fadeInRight;
+    animation-duration: 2.5s;
+    animation-timing-function: ease;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
+}
+
+body > header > article > a > .caption:hover {
+    box-shadow: 0 0 0 0.3vw rgb(199, 60, 60);
+    transform: scale(1.05);
+}
+
+body > header > article > a > .caption > p {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: white;
+    padding: 0.5vw;
+    font-size: 1.5vw;
+    font-weight: 600
+}
+
+body > header > article > a > .caption > figure {
+    padding-top: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+body > header > article > a > .caption > figure > img{
+    height: 4vw;
+}
+
+body > header > article > a {
+    text-decoration: none;
+}
+
+body > header > .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.2;
+    position: absolute;
+}
+
+@keyframes fadeInLeft {
+    0% {right: 60vw; opacity: 0;}
+    50% {right: -3vw; opacity: 1;}
+    100% {right: 0;}
+}
+
+@keyframes fadeInRight {
+    0% {left: 30vw; opacity: 0;}
+    50% {left: -3vw; opacity: 1;}
+    100% {left: 0;}
+}
+
+
+body > main {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    position: relative;
+}
+
+body > main > .main_box {
+    box-shadow: 1px 1px 10px 1px black, -1px -1px 10px -1px black; 
+    box-sizing:border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+}
+
+body > main > #main_box_home {
+    width: 80vw;
+    background-image: linear-gradient(rgba(47, 79, 79, 0.8), rgba(28, 48, 48, 0.8));
+}
+
+body > main > #main_box_webshop {
+    width: 90vw;
+    background-image: linear-gradient(rgba(47, 79, 79, 0.8), rgba(28, 48, 48, 0.8));
+}
+
+body > main > #main_box_dlc {
+    width: 80vw;
+    background-image: linear-gradient(rgba(121, 28, 28, 0.8), rgba(95, 10, 10, 0.8));
+}
+
+body > main > #main_box_cart {
+    width: 90vw;
+    margin-top: 15vh;
+}
+
+body > main > .main_box > .main_box_header {
+    background-size: contain;
+    box-shadow: 0px 1px 3px 0px black;
+    position: relative;
+    height: 20vw;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+#home_main_box_header {
+    background: url(/img/greenpath_bench.jpg) no-repeat center 70% scroll;
+    background-size: cover;
+}
+
+#webshop_main_box_header {
+    background: url(/img/queens_gardens.png) no-repeat center center scroll;
+    background-size:cover;
+}
+
+#dlc_main_box_header {
+    background: url(/img/grimm_fight.jpg) no-repeat center center scroll;
+    background-size: cover;
+}
+
+body > main > .main_box > .main_box_header > h2 {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    font-size: 5vw;
+    align-self: center;
+}
+
+.main_box > .main_box_header > figure {
+    display: flex;
+}
+
+.main_box > .main_box_header > figure > .top {
+    align-self: flex-end;
+    position: relative;
+    height: 5vw;
+}
+
+.main_box > .main_box_header > figure > .bottom {
+    align-self: flex-start;
+    position: relative;
+    height:3.4vw;
+}
+
+.main_box > .main_box_header > .overlay {
+    background-image: linear-gradient(to right, black, rgba(0,0,0,0.1));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.main_box > .main_box_main {
+    position: relative;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 3vw;
+    padding: 3vw;
+}
+
+.cardWrapper {
+    list-style: none;
+    position: relative;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    row-gap: 3vw;
+    column-gap: 3vw;
+}
+
+.main_box_main > h2 {
+    position: relative;
+    grid-column-start: 1;
+    text-align: center;
+    width: 100%;
+    padding-top: 3vw;
+    font-size: 3vw;
+    opacity: 0;
+}
+
+#totalPriceWrapper {
+    box-shadow: 1px 1px 10px 1px black;
+    height: 3.5vw;
+    background-color: rgb(23, 37, 37);
+    display: flex;
+    column-gap: 1vw;
+    padding: 1vw;
+    font-size: 1.5vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#totalPriceWrapper > h2 {
+    position: relative;
+    font-size: 3vw;
+    opacity: 0;
+}
+
+#payButton {
+    position: relative;
+    opacity: 0;
+    height: 110%;
+    color: white;
+    background-image: radial-gradient(green, rgb(4, 73, 4));
+    text-align: center;
+    border-radius: 5px;
+    font-size: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: 2px 2px 4px black;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+#payButton:hover {
+    background-image: radial-gradient(rgb(4, 73, 4), green);
+}
+
+.productCard {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 10px 1px black;
+    border-radius: 5px;
+    font-size: 1.5vw;
+    background: url(/img/grimm_menu.png) no-repeat center center scroll;
+    background-size:cover;
+    transition: 0.2s all;
+}
+
+.productCard:hover {
+    transform: scale(1.05);
+    border: 0.5vw;
+    border-style: solid;
+    border-color:rgb(103, 21, 21)
+}
+
+.productCard > figure {
+    width: 100%;
+    height: 100%;
+}
+
+.productCard > figure > img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.productCard > .cardCaption {
+    display: grid;
+    background-image:repeating-linear-gradient(rgb(146, 30, 30), rgb(153, 54, 54));
+    grid-template-columns: 68% 32%;
+    padding: 0.7vw;
+    align-items: center;
+    font-size: 1.2vw;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    grid-template-areas:
+    "h2 button"
+    "p button";
+}
+
+.productCard > .cardCaption > h2 {
+    font-size: 140%;
+    grid-area: h2;
+}
+
+.productCard > .cardCaption > button {
+    font-size: 100%;
+    background-color: brown;
+    border-radius: 5px;
+    height: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    grid-area: button;
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: 2px 2px 4px black;
+    color: white;
+}
+
+.removeFromCartButton {
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    text-shadow: 2px 2px 4px black;
+}
+
+.productCard > .cardCaption > p {
+    grid-area: p;
+}
+
+.searchWrapper {
+    box-shadow: 1px 1px 10px 1px black;
+    height: 3.5vw;
+    background-color: rgb(23, 37, 37);
+    display: flex;
+    column-gap: 1vw;
+    padding: 1vw;
+    font-size: 1.5vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main_box > .searchWrapper > .searchbar {
+    position: relative;
+    text-align: center;
+    box-shadow: 0.1px 0.1px 3px 0.1px black;
+    height: 100%;
+    width: 60%;
+    padding-left: 1vw;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 100%;
+}
+
+.main_box > .searchWrapper > .searchbar:focus {
+    outline: 0.6vw solid darkslategray;
+}
+
+.main_box > .searchWrapper > button {
+    height: 110%;
+    background: none;
+    color: white;
+    background-color: brown;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 200%;
+    display: flex;
+}
+
+.main_box > .searchWrapper > button > i {
+    align-self: center;
+    font-size: inherit;
+    padding: 1vw;
+}
+
+.productCard > .cardCaption > button:hover {
+    background-color: rgb(126, 32, 32);
+}
+
+
+.main_box > .main_box_main > div {
+    box-sizing: border-box;
+    position: relative;
+    box-shadow: 0px 1px 10px 0px black;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: row;
+    flex-basis: content;
+    transition: 0.3s cubic-bezier(0, 0, 1, 0);
+    width: 100%;
+}
+
+.main_box > .main_box_main > div:hover{
+    transform: translateY(-1.5vw);
+    box-shadow: 0px 8px 20px 0px black;
+}
+
+.main_box > .main_box_main > .card {
+    background-color:rgb(72, 100, 100);
+}
+
+.main_box > .main_box_main > .cardDLC {
+    background-color:rgb(108, 53, 53);
+}
+
+.main_box > .main_box_main > div > .card_text {
+    width: 70%;
+    height: 100%;
+    font-size: 2vw;
+    box-sizing: border-box;
+}
+
+.main_box > .main_box_main > div > .card_text > p {
+    padding: 1vw;
+    font-size: 80%;
+    font-weight:100;
+}
+
+.main_box > .main_box_main > div > .tall {
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 30%;
+    height: 100%;
+}
+
+.main_box > .main_box_main > div > .wide {
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+    height: 50%;
+}
+
+.main_box > .main_box_main > div > figure > img{
+    height: 100%;
+    width: 100%;
+}
+
+.main_box > .main_box_main > figure > img {
+    height: 100%;
+    width: 100%;
+}
+
+.main_box > .main_box_main > div > .tall > .img_right {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: -1px 0px 5px 0px black;
+}
+
+.main_box > .main_box_main > div > .tall > .img_left {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: 1px 0px 5px 0px black;
+}
+
+.main_box > .main_box_main > div > .wide > #bottom_img {
+    border-bottom-left-radius: 5px;
+    box-shadow: 1px 0px 5px 0px black;
+}
+
+.main_box > .main_box_main > div > .wide > #top_img {
+    border-top-left-radius: 5px;
+    box-shadow: 1px 0px 5px 0px black;
+}
+
+.main_box > .main_box_main > div > .card_text > h3 {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1vw;
+    font-size: 100%;
+}
+
+.main_box > .main_box_main > div > .card_text > .h3_left {
+    border-top-left-radius: 5px;
+}
+
+.main_box > .main_box_main > div > .card_text > .h3_right {
+    border-top-right-radius: 5px;
+}
+
+.main_box > .main_box_footer {
+    padding-left: 2.5vw;
+    padding-bottom: 2.5vw;
+    padding-right: 2.5vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.main_box > .main_box_footer > .footer_card > .yt_embed {
+    position:relative;
+    padding-bottom:54.15%;
+    padding-top:30px;
+    height:0;
+    overflow:hidden;
+}
+
+.main_box > .main_box_footer > .footer_card {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 10px 0px black;
+}
+
+.main_box > .main_box_footer > .footer_card > h2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-size: 3vw;
+}
+
+.main_box > .main_box_footer > .footer_card > .yt_embed > iframe {
+    position:absolute;
+    top:0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    width:100%;
+    height: 100%;
+    border: 0;
+}
+
+body > footer {
+    border-top-style: solid;
+    border-top-width: 5px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 35% 35%;
+    justify-content: center;
+    column-gap: 2vw;
+    padding: 2vw;
+    width: 100%;
+    position: relative;
+}
+
+body > .normalFooter {
+    border-top-color:rgb(28, 48, 48);
+    background-image: linear-gradient(darkslategray, rgb(21, 36, 36));
+}
+
+body > .DLCFooter {
+    border-top-color:rgb(95, 10, 10);
+    background-image: linear-gradient(rgb(137, 51, 51), rgb(95, 10, 10));
+}
+
+body > footer > .footer_card {
+    box-shadow: 1px 1px 10px 1px black, -1px -1px 10px -1px black; 
+    font-size: 1vw;
+    font-weight:400;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    border-radius: 5px;
+}
+
+body > .normalFooter > .footer_card {
+    background: darkslategray;
+}
+
+body > .DLCFooter > .footer_card {
+    background: rgb(137, 51, 51);
+}
+
+body > footer > .footer_card > h2 {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: relative;
+    text-align: center;
+    font-size: 250%;
+}
+
+body > .normalFooter > .footer_card > h2 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+body > .DLCFooter > .footer_card > h2 {
+    background-color: rgb(103, 21, 21);
+}
+
+body > footer > .footer_card > a {
+    height: 100%;
+    width: 100%;
+    text-decoration: underline;
+    color: white;
+}
+
+body > footer > .footer_card > a > p {
+    font-size: 140%;
+    padding: 1vw;
+}
+
+body > footer > .footer_card > p {
+    padding: 1vw;
+    font-size: 140%;
+}
+
+body > footer > .footer_card > .bottom_box {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+body > .normalFooter > .footer_card > a > p:hover {
+    background-color: rgb(78, 128, 128);
+}
+
+body > .DLCFooter > .footer_card > a > p:hover {
+    background-color: rgb(148, 87, 87);
+}
+
+@media only screen and (max-width: 1000px) {
+    body > nav > a > h2 {
+        font-size: 5vw;
+    }
+
+    body > nav > a > figure {
+        height: 4vw;
+    }
+    body > nav > a > figure > img {
+        height: 4vw;
+    }
+    body > header > article > h1 {
+        font-size: 16vw;
+    }
+    body > header > article > figure > img {
+        width: 80%;
+    }
+    body > header > article > h2 {
+        position: relative;
+        font-size: 4vw;
+    }
+    body > header > article > a > .caption {
+        width: 40vw;
+        border-left-width: 1.6vw;
+    }
+    body > header > article > a > .caption:hover {
+        box-shadow: 0 0 0 0.6vw rgb(199, 60, 60);
+    }
+    body > header > article > a > .caption > p {
+        font-size: 3vw;
+    }
+    body > header > article > a > .caption > figure > img {
+        height: 10vw;
+    }
+    .productCard > .cardCaption {
+        font-size: 1.3vw;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    body > header {
+        height: 70vh;
+    }
+    body > main > .main_box > .main_box_header {
+        height: 35vw;
+    }
+    body > main > .main_box > .main_box_header > h2 {
+        font-size: 8vw;
+    }
+    
+    .main_box > .main_box_header > figure > .top {
+        height: 8vw;
+    }
+    .main_box > .main_box_header > figure > .bottom {
+        align-self: flex-start;
+        position: relative;
+        height:5.8vw;
+    }
+    .searchWrapper {
+        height: 5vw;
+        font-size: 2vw;
+        padding: 2vw;
+    }
+    #totalPriceWrapper {
+        height: 5vw;
+        font-size: 2vw;
+        padding: 2vw;
+    }
+    .main_box_main > h2 {
+        font-size: 5vw;
+    }
+    .cardWrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+    .cardWrapper > h2 {
+        font-size: 5vw;
+        grid-column-start: 1;
+    }
+    #totalPriceWrapper > h2 {
+        font-size: 5vw;
+    }
+    #payButton {
+        font-size: 150%;
+    }
+    .productCard > .cardCaption {
+        font-size: 2vw;
+    }
+    .productCard:hover {
+        border-width: 1vw;
+    }
+    .main_box > .main_box_main > div {
+        flex-flow: column;
+    }
+    .main_box > .main_box_main > div:hover{
+        transform: none;
+        box-shadow: 0px 1px 10px 0px black;
+    }
+    .main_box > .main_box_main > div > .card_text {
+        width: 100%;
+        font-size: 4vw;
+    }
+    body > main > #main_box_home {
+        width: 90vw;
+    }
+    body > main > #main_box_dlc {
+        width: 90vw;
+    }
+    .main_box > .main_box_main > div > .tall {
+        width: 100%;
+    }
+    .main_box > .main_box_main > div > .wide {
+        width: 100%;
+        height: 100%;
+    }
+    .main_box > .main_box_footer > .footer_card > h2 {
+        font-size: 5vw;
+    }
+    body > footer > .footer_card > h2 {
+        font-size: 400%;
+    }
+    body > footer > .footer_card > a > p {
+        font-size: 250%;
+    }
+    
+    body > footer > .footer_card > p {
+        font-size: 250%;
+    }
+    body > footer {
+        grid-template-columns: 1fr 1fr;
+    }
+    .main_box > .main_box_main > div > .tall > .img_right {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 0px;
+    }
+    .main_box > .main_box_main > div > .wide > #bottom_img {
+        border-bottom-left-radius: 0px;
+    }
+    .main_box > .main_box_main > div > .wide > #top_img {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px
+    }
+    .main_box > .main_box_main > div > .card_text > .h3_left {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    
+    .main_box > .main_box_main > div > .card_text > .h3_right {
+        border-top-right-radius: 0px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #main_box_webshop > .main_box_main {
+        padding: 4vw;
+    }
+    .main_box > .main_box_main > div > .card_text {
+        width: 100%;
+        font-size: 5.5vw;
+    }
+    .main_box > .main_box_main > div > .card_text > p {
+        padding: 10px;
+    }
+    .main_box > .main_box_main > div > .card_text > h3 {
+        padding: 10px;
+    }
+    .searchWrapper {
+        height: 8vw;
+        font-size: 3vw;
+    }
+    #totalPriceWrapper {
+        height: 8vw;
+        font-size: 2.3vw;
+    }
+    .productCard > .cardCaption {
+        font-size: 3vw;
+        padding: 3vw;
+    }
+    .cardWrapper {
+        row-gap: 4vw;
+        grid-template-columns: 1fr;
+    }
+    .productCard {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-height: 480px) {
+    body > header > article > h1 {
+        font-size: 10vw;
+    }
+    body > header > article > h2 {
+        position: relative;
+        font-size: 3vw;
+    }
+    body > header > article > a > .caption {
+        width: 40vw;
+    }
+    body > header > article > a > .caption > p {
+        font-size: 2vw;
+    }
+    body > header > article > a > .caption > figure > img {
+        height: 6vw;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    body > .header_home {
+        background: url(/img/page_header.jpg) no-repeat center center scroll;
+        background-size:cover;
+        height: 100vh;
+    }
+    
+    body > .header_webshop {
+        background: url(/img/shrine.png) no-repeat center bottom scroll;
+        background-size: cover;
+        height: 100vh;
+    }
+    body > .header_dlc {
+        background: url(/img/grimm_troupe.jpg) no-repeat center bottom scroll;
+        background-size: cover;
+        height: 100vh;
+    }
+}
